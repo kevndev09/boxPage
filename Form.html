@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+                            <!--(logo)-->
+
+    <div class="container-fluid py-2 px-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+         fill="currentColor" class="bi bi-tropical-storm"
+            viewBox="0 0 16 16">
+            <path d="M8 9.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
+            <path
+                d="M9.5 2c-.9 0-1.75.216-2.501.6A5 5 0 0 1 13 7.5a6.5 6.5 0 1 1-13 0 .5.5 0 0 1 1 0 5.5 5.5 0 0 0 8.001 4.9A5 5 0 0 1 3 7.5a6.5 6.5 0 0 1 13 0 .5.5 0 0 1-1 0A5.5 5.5 0 0 0 9.5 2zM8 3.5a4 4 0 1 0 0 8 4 4 0 0 0 0-8z" />
+        </svg>
+    </div>
+
+                             <!--Estilos generales(CSS)-->
+
+    <style>
+        
+        body{
+            background-color: whitesmoke;
+            overflow-x: hidden;
+        }
+
+        input{
+            border: none;
+            cursor: pointer;
+            background-color: #F5F5F5;
+            padding: 3px;
+        }
+        
+        input:hover{
+            opacity: 0.85;
+            box-shadow: 1px 1px 5px grey;
+            transition: all 0.2s;
+        }
+
+        .container-fluid svg:hover{
+          animation: rotation 0.55s linear forwards;
+          cursor: pointer;
+        }
+
+        @keyframes rotation{
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(150deg);
+            }
+        }
+
+    </style>
+                         <!--Creacion del formulario-->
+
+    <div class="container d-flex justify-content-center"
+     style="margin-top: 150px;">
+        <h2>Hola,me darias unos datos?</h2>
+    </div>
+    <div class="container">
+        <hr>
+            <form action="page.html" method="get">
+                <button class="btn btn-outline-danger">Denegar</button>
+            </form>
+        <hr>
+    </div>
+    <form action="page.html" method="get">
+
+        <div class="container d-flex" style="justify-content: space-around;">         
+            <input type="text" placeholder="Dame tu username" id="name"
+            class="rounded bg-light">
+
+            <input class="rounded bg-light" type="number" placeholder="Dime tu edad" 
+             id="edad">
+        </form>
+    </div>
+    <div class="container mt-4 d-flex justify-content-center">
+        <label class="mt-1" for="date" style="margin-right: 4px;">Cuando naciste</label>
+        <input type="date" id="date" class="rounded bg-light">
+    </div>
+    
+    <div class="container">
+        <hr>
+            <form action="page.html" method="get" target="_self">
+                <button type="submit" class="btn  btn-outline-success" 
+                onclick="mostrarAlert()">Ingresar</button>
+            </form>
+        <hr>
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+
+        <script src="form.js"></script>
+</body>
+</html>
